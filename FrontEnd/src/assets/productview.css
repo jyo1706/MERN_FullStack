@@ -1,0 +1,152 @@
+.productViewContainer
+{
+    width: 100%;
+    gap:20px;
+    display: flex;
+    width: 100%;
+    margin-top:150px;
+    padding-inline:40px;
+}
+.productImage
+{
+  width: 47%;
+  border-radius: 4px;
+  border: 1px solid rgb(236, 228, 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.productDelivery
+{
+  font-size: 13px;
+  font-weight: 500;
+  color:grey;
+}
+.productImages
+{
+  width: 6%;
+}
+.productImages img
+{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;;
+}
+.productImage img
+{
+  width: 80%;
+  height: 400px;
+}
+.productDetail
+{
+  width: 47%;
+  border: 1px solid rgb(236, 228, 228);
+  border-radius: 4px;
+  padding-inline: 15px;
+  padding-block: 20px;
+}
+.productDetail h1
+{
+   font-size: 20px;
+   color:rgb(175, 164, 164);
+   font-weight: 500;
+}
+.productPrice span:first-child
+{
+  font-size: 25px;
+  font-weight: 700;
+  margin-right:15px;
+}
+.productPrice span:nth-child(2)
+{
+  font-size: 20px;
+  font-weight: 400;
+  margin-right:20px;
+  color: gray;
+}
+.productPrice span:nth-child(3)
+{
+  font-size: 18px;
+  color:#038d63;
+  font-weight: 600;
+}
+.starIcon{
+  background-color: #038d63;
+  width: 60px;
+  font-size: 15px;
+  text-align: center;
+  color:white;
+  padding: 10px;
+  border-radius:10px 50px;
+}
+
+.buttons
+{
+
+  text-align: center;
+}
+.first
+{
+   background-color: white;
+   color: var(--color) !important;;
+   border:1px solid var(--color);
+   width:38%;
+   font-weight: 600;
+}
+.first:hover{
+  background-color: white;
+   color: var(--color) !important;;
+   border:1px solid var(--color);
+   width:38%;
+   font-weight: 600;
+}
+.second
+{
+  width: 38%;
+  background-color: var(--color);
+  color:white;
+}
+.second:hover
+{
+  width: 38%;
+  background-color: var(--color);
+  color:white;
+}
+@media (max-width:780px)
+{
+  .productViewContainer
+    {
+      flex-direction: column;
+       
+    }
+  .productImage,.productDetail
+  {
+    width: 100%;
+  }
+  .productImage img
+  {
+    width: 50%;
+    height: 300px;
+  }
+  .productImages
+  {
+    display: none;
+  }
+}
+@media (max-width:500px)
+{
+     .first
+     {
+      font-size: 15px;
+      /* font-weight: 400; */
+     }
+}
+@media (max-width:380px)
+{
+     .first
+     {
+      font-size: 15px;
+      font-weight: 400;
+     }
+}

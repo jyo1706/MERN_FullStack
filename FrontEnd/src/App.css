@@ -1,0 +1,249 @@
+*
+{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root
+{
+ 
+  --color:#325b86;
+  --white:white;
+  --black:black;
+}
+h1,h2,h3,h4,h5,h6
+{
+  margin-bottom: 0;
+}
+body
+{
+  width: 100%;
+  min-height:606px;
+  background-color: white;
+  
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* background: linear-gradient(to bottom right, #3aabb4 0%,  #d845fc 100%); */
+   /* background-image: url('https://static.vecteezy.com/system/resources/thumbnails/049/158/160/small_2x/header-shape-for-website-and-border-for-banner-abstract-design-element-for-template-curve-divider-for-bottom-section-and-separator-simple-graphic-form-for-background-of-presentation-png.png'); */
+   /* background-repeat: no-repeat;
+   background-size: cover; */
+}
+a
+{
+   text-decoration:none !important;
+}
+ul{
+  list-style: none;
+}
+input
+{
+  padding:5px;
+  border:none;
+  border-bottom:1px solid;
+  outline: none;
+  margin-bottom:15px;
+  width: 100%;
+}
+input:focus
+{
+  border-bottom:1px solid;
+  outline:none;
+  border:0px 0px 1px 0px;
+}
+div:focus
+{
+ border:none;
+}
+span:focus
+{
+  border:none;
+}
+
+/* registration container */
+.res-container
+{
+  box-shadow: 0px 0px 10px;
+  border-radius: 5px;
+  height:520px;
+  /* margin-top:-20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:400px;
+  min-height:250px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(to bottom right, #3aabb4 0%,  #d845fc 100%); */
+   background-color: rgb(97, 133, 133);
+  .heading
+  {
+    color:var(--color);
+    text-align: center;
+  }
+}
+.form-button
+{
+  background-color:var(--color);
+  color:var(--white);
+  border-radius: 8px;
+  width:265px;
+  padding:6px;
+  margin-top: 25px;
+  border-radius: 50px;
+  border:none;
+} 
+.password
+{
+  position: relative;
+ 
+}
+#passwordEye
+{
+  position: absolute;
+  top:10px;
+  right:20px;
+  width:20px;
+  color:var(--color)
+}
+.validation
+{
+  margin-top:-15px;
+  margin-bottom:0px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.form-container
+{
+  margin-top:2rem;
+}
+.errorHeader
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backendError
+{
+  color:red;
+  font-weight:600;
+  font-size:15px;
+  text-align: center;
+  padding: 10px;
+  width:80%;
+  background-color: rgb(107, 138, 107);
+  border-radius: 10px;
+}
+.bottom-heading-registration
+{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    font-weight:700;
+    .inner
+    {
+      color:#063970;
+    }
+}
+
+ table
+ {
+  padding:20px;
+ }
+ .main
+ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 606px;
+ }
+ .form-control
+ {
+  border-radius: 30px;
+  outline:none;
+  border:none;
+  height: 27px;
+ }
+
+
+ .table-container
+ {
+  display: flex;
+  align-items:start;
+  /* justify-content: center; */
+  flex-direction: column;
+  width:90%;
+  
+  table
+  {
+    padding:20px;
+  }
+ }
+ .carousel-indicators
+ {
+  color: white !important;
+ }
+ .carousel-dark .carousel-caption
+{
+    color:white !important;
+}
+.carousel-dark .carousel-indicators [data-bs-target]
+{
+    background-color: white !important;
+}
+.starIcon 
+{
+  font-size:25px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+btn
+{
+  color: white;
+}
+
+
+
+
+
+
+.addbtn
+{
+  background-color: var(--color);
+  color:white !important;
+}
+.btn{
+  color: white !important;
+}
+
+
+
+
+/* Default table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Responsive styles */
+@media (max-width: 750px) {
+  .table-container {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    border: 1px solid #ccc; /* Optional: Adds a border around the scroll area */
+  }
+
+  table {
+    width: 600px; /* Make the table wider than the container to trigger the scroll */
+    min-width: 600px; /* Prevents the table from shrinking too much */
+  }
+}

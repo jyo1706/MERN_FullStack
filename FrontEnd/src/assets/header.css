@@ -1,0 +1,197 @@
+h3{
+  margin-bottom: 0px;
+}
+.header
+{
+  
+  height:50px;
+  width: 100%;
+  display: flex;
+  background-color: var(--color);
+  color:white  !important; 
+  align-items: center;
+  padding-inline:20px;
+  padding-left:150px;
+}
+.header-ul
+{
+  font-size: 12px;
+ display: flex;
+ color:white;  
+ gap:15px;
+ align-items: center;
+ justify-content: center;
+}
+.header-ul li
+{
+ color:white;
+ padding-block:10px;
+ 
+ margin:auto;
+
+}
+.cartSub
+{
+  background-color:rgb(63, 134, 206);
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top:2px;
+  right:12px;
+}
+.cartSub span
+{
+  font-weight: 600;
+  padding: 7px;
+}
+
+.header-ul li span{
+  display: flex;
+  flex-direction: column;
+  
+}
+.icon
+{
+  font-size:15px;
+  color:white;
+}
+.header-inner
+{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ color: white;
+ width: 100%;
+}
+.headerBtn
+   {
+      display:none;
+   }
+.dropdown-menu
+  {
+    width:100% !important;
+  }
+.header-inner div:nth-child(2)
+  {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+  }
+.searchBar
+{
+  input
+  {
+    width: 50%;
+  }
+}
+.dropdown-menu
+{
+  margin:23px 0px 0px 0px !important;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block !important;
+  
+}
+.nav-link
+{
+  color:white !important;
+}
+/* Optional: Add a smooth transition */
+.dropdown-menu {
+  display:none !important;
+  transition: opacity 0.3s ease !important;
+  
+}
+.show
+{
+  inset: -18px 3px auto auto !important;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+}
+
+/* Optional: Ensure that the dropdown content is positioned correctly */
+.dropdown-menu {
+  position: absolute !important;
+  /* z-index: 1000 !important; */
+  
+    inset: 0px 0px auto auto;
+    margin: 0px;
+    transform: translate3d(0px, 26px, 0px);
+}
+.dropdown-menu li{
+  /* padding-inline: 10px; */
+  border-bottom: 1px solid grey;
+  /* padding-block:12px; */
+  
+}
+.lastLi
+{
+  border:0px !important;
+}
+   @media (max-width:700px)
+   {
+    .headerBtn
+    {
+      display:block;
+    }
+    .header-ul
+    {
+      display: none;
+    }
+    .header
+    {
+      padding-left: 10px;
+    }
+    .header-inner
+    {
+
+    }
+    .header-inner div:nth-child(2)
+    {
+      align-items: start;
+    }
+    .offcanvas
+    {
+      height: 606px;
+      /* margin-top: 68px; */
+    }
+    .offcanvas-body,  .offcanvas-body ul,li
+    {
+         width:100%;
+      
+    }
+    .offcanvas ul
+    {
+      padding-inline: 0;
+      
+    }
+    .offcanvas li
+    {
+      padding-block:15px;
+      margin-top:0 !important;
+    }
+    .cartSub
+   {
+  
+    top: 143px;
+    right:34px;
+  }
+  }
+ @media (max-width:800px)
+ {
+  .header
+  {
+    padding-left: 10px;
+  }
+ }
+ @media (max-width:500px)
+ {
+  .offcanvas
+  {
+    width:75% !important;
+  }
+ }
