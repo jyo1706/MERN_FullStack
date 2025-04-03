@@ -27,7 +27,7 @@ const location = useLocation();
   {
    
     // console.log("hello")
-    axios.get(`http://localhost:4000/deleteData/${id}`,{withCredentials:true})
+    axios.get(`https://mern-fullstack-1-j3k1.onrender.com/deleteData/${id}`,{withCredentials:true})
      .then(res=>{ if(res.data.message==='Data Delete Successfully'){navigator('/displayData',{state:{message:res.data.message}})}})
      .catch(err=>console.log(err))
      const message = location.state?.message;
@@ -37,7 +37,7 @@ const location = useLocation();
 
     useEffect(()=>{
             
-              axios.get(`http://localhost:4000/displayData`,{
+              axios.get(`https://mern-fullstack-1-j3k1.onrender.com/displayData`,{
                   withCredentials:true, // This sends cookies with the request
                 }).then((response)=>{
                     

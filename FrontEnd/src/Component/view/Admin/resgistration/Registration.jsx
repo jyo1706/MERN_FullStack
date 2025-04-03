@@ -23,7 +23,7 @@ const Registration = () => {
       //sent data to the database
       if (Object.keys(isValidation).length === 0) {
         axios
-          .post("http://localhost:4000/res", formObj)
+          .post("https://mern-fullstack-1-j3k1.onrender.com/res", formObj)
           .then((res) => {
             navigation("/login");
             console.log(res);

@@ -15,7 +15,7 @@ function ProductEdit() {
   // Fetch product data on component mount (if editing an existing product)
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/edit/${productId}`, {
+      .get(`https://mern-fullstack-1-j3k1.onrender.com/edit/${productId}`, {
         withCredentials: true, // This sends cookies with the request
         headers: {
           "Content-Type": "multipart/form-data",
@@ -39,7 +39,7 @@ function ProductEdit() {
 
       // Make PUT request to the backend API to update the product
       axios
-        .put(`http://localhost:4000/update/${productId}`, editData, {
+        .put(`https://mern-fullstack-1-j3k1.onrender.com/update/${productId}`, editData, {
           withCredentials: true, // This sends cookies with the request
           headers: {
           "Content-Type": "multipart/form-data",

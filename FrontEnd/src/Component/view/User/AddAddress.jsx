@@ -45,7 +45,7 @@ function AddAddress() {
     const datafield = Object.fromEntries(dataValue.entries()); // Convert FormData to a plain object
  
     // Send POST request to the server
-    axios.post("http://localhost:4000/address", datafield, {
+    axios.post("https://mern-fullstack-1-j3k1.onrender.com/address", datafield, {
         withCredentials: true, // Send cookies with the request
       }).then((res) =>
       {
@@ -64,7 +64,7 @@ function AddAddress() {
 
  // ********************************Method For Display Address******************************
   useEffect(() => {
-    axios.get("http://localhost:4000/findAddress", {
+    axios.get("https://mern-fullstack-1-j3k1.onrender.com/findAddress", {
         withCredentials: true,
       }).then((res) => {
         setFindAddress(res.data.data);

@@ -25,7 +25,7 @@ function TotalPrice() {
   // Fetch data on component mount
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/addTocard`, {
+      .get(`https://mern-fullstack-1-j3k1.onrender.com/addTocard`, {
         withCredentials: true, // This sends cookies with the request
       })
       .then((res) => {
@@ -47,7 +47,7 @@ function TotalPrice() {
   
    if(Object.keys(quantityState).length>0)
    {
-    axios.post('http://localhost:4000/updateQuantity',quantityState,{withCredentials:true}).then((res)=>{}).catch((err)=>console.log(err))
+    axios.post('https://mern-fullstack-1-j3k1.onrender.com/updateQuantity',quantityState,{withCredentials:true}).then((res)=>{}).catch((err)=>console.log(err))
    }
   }
   // If still loading, show a loading message
@@ -83,12 +83,12 @@ function TotalPrice() {
                      });
                      navigator('/');
                      localStorage.removeItem('page')
-        axios.post(`http://localhost:4000/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{cartDispatch({type:'cart',payload:true});
+        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{cartDispatch({type:'cart',payload:true});
       })
       .catch((err)=>console.log(err))
         
            //  Method for delete Product for after order Place
-                axios.get('http://localhost:4000/deleteProductFormAddToCard',{withCredentials:true})
+                axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
                 }
               }
               const rzp = window.Razorpay(option);
@@ -109,11 +109,11 @@ function TotalPrice() {
 
       else
       {
-       axios.post(`http://localhost:4000/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{navigator('/');cartDispatch({type:'cart',payload:true});
+       axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{navigator('/');cartDispatch({type:'cart',payload:true});
       })
       .catch((err)=>console.log(err))
         
-        axios.get('http://localhost:4000/deleteProductFormAddToCard',{withCredentials:true})
+        axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
       }
   }
   else

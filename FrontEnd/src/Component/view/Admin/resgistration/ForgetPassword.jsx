@@ -14,7 +14,7 @@ function ForgetPassword() {
         const form = new FormData(value)
         const formData = Object.fromEntries(form.entries())
          
-         axios.post('http://localhost:4000/forgetPassword',formData)
+         axios.post('https://mern-fullstack-1-j3k1.onrender.com/forgetPassword',formData)
          .then((res)=>{console.log(navigation(`/resetPassword/${res.data.id}`));}).catch((err)=>setGetError(err.response.data.message ))
        
        })

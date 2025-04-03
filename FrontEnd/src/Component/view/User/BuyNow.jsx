@@ -27,7 +27,7 @@ function BuyNow() {
 
 // *****************************User Products *****************************
     useEffect(()=>{
-        axios.get(`http://localhost:4000/buyNow/${productId}`, {
+        axios.get(`https://mern-fullstack-1-j3k1.onrender.com/buyNow/${productId}`, {
         withCredentials: true, // This sends cookies with the request
       }).then((res)=>
         {
@@ -67,11 +67,11 @@ function BuyNow() {
    
    if(!id)
    {
-    axios.get('http://localhost:4000/findAddress',{withCredentials:true}).then((res)=>{setfindAddress(res.data.data[0])}).catch((err)=>console.log(err))
+    axios.get('https://mern-fullstack-1-j3k1.onrender.com/findAddress',{withCredentials:true}).then((res)=>{setfindAddress(res.data.data[0])}).catch((err)=>console.log(err))
    }
    else
    {
-    axios.get(`http://localhost:4000/findAddress/${id}`,{withCredentials:true}).then((res)=>{setfindAddress(res.data.data)}).catch((err)=>console.log(err))
+    axios.get(`https://mern-fullstack-1-j3k1.onrender.com/findAddress/${id}`,{withCredentials:true}).then((res)=>{setfindAddress(res.data.data)}).catch((err)=>console.log(err))
     localStorage.removeItem('id')
    }
    

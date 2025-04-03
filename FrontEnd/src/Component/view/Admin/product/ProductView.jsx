@@ -19,14 +19,14 @@ function ProductView() {
     const i = 1;
     useEffect(()=>
     {
-        axios.get(`http://localhost:4000/view/${productId}`, {
+        axios.get(`https://mern-fullstack-1-j3k1.onrender.com/view/${productId}`, {
           withCredentials: true, // This sends cookies with the request
         })
          .then((res)=>{
            
           setData(res.data)
         
-          // console.log(res.data)
+          console.log(res.data)
    
         }
         )
@@ -38,7 +38,7 @@ function ProductView() {
 
   const addProduct = ()=>{
                 
-      axios.get(`http://localhost:4000/addTocard/${productId}`, {
+      axios.get(`https://mern-fullstack-1-j3k1.onrender.com/addTocard/${productId}`, {
         withCredentials: true,                                                 // This sends cookies with the request
       })
        .then((res)=>{

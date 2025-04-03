@@ -1,8 +1,7 @@
 import axios from "axios"
-import { useCallback, useContext, useEffect } from "react"
+
 import { useNavigate } from "react-router-dom"
 import Userdata from "../../../Hooks/Userdata"
-import { UserContext } from "../../../Hooks/useContext"
 
 
 function Product() {
@@ -19,7 +18,7 @@ const navigator = useNavigate()
      const form = new FormData(formData)
      const data =  Object.fromEntries(form.entries())
      console.log(data.image)
-     axios.post('http://localhost:4000/productData',data, {
+     axios.post('https://mern-fullstack-1-j3k1.onrender.com/productData',data, {
       withCredentials: true,  // This sends cookies with the request
       headers: {
           "Content-Type": "multipart/form-data",
@@ -30,7 +29,7 @@ const navigator = useNavigate()
   return (
    <>
   
-    < div className="main">
+    <div className="main">
       {/* Registration Div Start */}
       <div className="bg-white res-container pt-1 p-3">
         {/* Form Heading */}

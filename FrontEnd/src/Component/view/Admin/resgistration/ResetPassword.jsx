@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 function ResetPassword() {
 
@@ -17,7 +18,7 @@ function ResetPassword() {
     const form = new FormData(data)
     const formData = Object.fromEntries(form.entries())
     // console.log(formData)
-     axios.post(`http://localhost:4000/resetPassword/${params.id}`,formData)
+     axios.post(`https://mern-fullstack-1-j3k1.onrender.com/resetPassword/${params.id}`,formData)
      .then((res)=>{if(res.data.message=="Password Reset Successfully")
       Swal.fire({
                             title: 'Password Reset Successfully',

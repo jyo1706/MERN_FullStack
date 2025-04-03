@@ -12,7 +12,7 @@ function EditAddress() {
   
   // console.log(findAddress)
   useEffect(() => { axios
-      .get(`http://localhost:4000/editAddress/${productId}`, {
+      .get(`https://mern-fullstack-1-j3k1.onrender.com/editAddress/${productId}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -29,7 +29,7 @@ const  updateAddress = ((e)=>
     const targetValue = e.target;
     const formObject = new FormData(targetValue)
     const formData = Object.fromEntries(formObject.entries())
-    axios.post(`http://localhost:4000/updateAddress/${productId}`,formData,{
+    axios.post(`https://mern-fullstack-1-j3k1.onrender.com/updateAddress/${productId}`,formData,{
       withCredentials:true
     }).then((res)=>
        {

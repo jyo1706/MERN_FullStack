@@ -32,7 +32,7 @@ useEffect(()=>
   btnDispatch({type:'btn',payload:false})
 },[])
 useEffect(()=>{
-  axios.get(`http://localhost:4000/buyNow/${productId}`, {
+  axios.get(`https://mern-fullstack-1-j3k1.onrender.com/buyNow/${productId}`, {
   withCredentials: true, // This sends cookies with the request
 }).then((res)=>
   {
@@ -47,7 +47,7 @@ console.log(err)})
 },[])
 useEffect(()=>
   {
-     axios.get('http://localhost:4000/findAddress',{withCredentials:true}).then((res)=>{setfindAddress(res.data.data[0])}).catch((err)=>console.log(err))
+     axios.get('https://mern-fullstack-1-j3k1.onrender.com/findAddress',{withCredentials:true}).then((res)=>{setfindAddress(res.data.data[0])}).catch((err)=>console.log(err))
   },[])
 
 const [data , setData ] = useState([]);
@@ -84,7 +84,7 @@ const placeOrder=(()=> {
                       cancelButtonColor: '#d33',
                       confirmButtonText: 'ok!',
                    });
-                   axios.post(`http://localhost:4000/placeOrder/${findAddress._id}`,obj,{withCredentials:true})
+                   axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${findAddress._id}`,obj,{withCredentials:true})
                    .then((res)=>{navigator('/');
                     localStorage.removeItem('page'); quantityDispatch({type:'reset'});}).catch((err)=>console.log(err.message))
                    }  
@@ -107,11 +107,11 @@ const placeOrder=(()=> {
        }
        else
        {
-        axios.post(`http://localhost:4000/placeOrder/${findAddress._id}`,obj,{withCredentials:true})
+        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${findAddress._id}`,obj,{withCredentials:true})
         .then((res)=>{navigator('/');
          localStorage.removeItem('page'); quantityDispatch({type:'reset'});}).catch((err)=>console.log(err.message))
          
-         axios.get('http://localhost:4000/deleteProductFormAddToCard',{withCredentials:true})
+         axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
        }    
       
     

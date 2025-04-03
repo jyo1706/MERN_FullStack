@@ -1,19 +1,19 @@
 import axios from 'axios'
 import  {useContext, useEffect, useState } from 'react'
-import {  Link, useLocation, useNavigate, useParams} from 'react-router-dom'
+import {  Link, useNavigate } from 'react-router-dom'
 import '../../../assets/addtocard.css'
 import {faXmark} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TotalPrice from './TotalPrice'
 import { BtnContext, CartLength, PaymentContext, QuantityContext } from '../../Hooks/useContext';
-import { toast } from 'react-toastify';
+
 import Swal from 'sweetalert2';
 
 function AddToCard() {
  
     const navigator = useNavigate()
     const {quantityState,quantityDispatch} = useContext(QuantityContext)
-    const {btnDispatch,btnState} = useContext(BtnContext)
+    const {btnDispatch} = useContext(BtnContext)
     const {cartDispatch} =useContext(CartLength)
     const {paymentDispatch} = useContext(PaymentContext)
    
@@ -26,7 +26,7 @@ function AddToCard() {
 
 // *****************************User All Products in cart*****************************
     useEffect(()=>{
-        axios.get(`http://localhost:4000/addTocard`, {
+        axios.get(`https://mern-fullstack-1-j3k1.onrender.com/addTocard`, {
         withCredentials: true, // This sends cookies with the request
       }).then((res)=>
         {
@@ -45,7 +45,7 @@ function AddToCard() {
  const deleteProduct = (id)=>
   {
    
-    axios.get(`http://localhost:4000/deleteProduct/${id}`, {
+    axios.get(`https://mern-fullstack-1-j3k1.onrender.com/deleteProduct/${id}`, {
       withCredentials: true, // This sends cookies with the request
     }).then(()=>
     {

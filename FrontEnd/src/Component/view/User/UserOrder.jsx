@@ -12,7 +12,7 @@ function UserOrder()
 // METHOD FOR ORDER LIST
 useEffect(()=>
     {
-        axios.get('http://localhost:4000/findOrder',{withCredentials:true}).then((res)=>setFindOrder(res.data.data)).catch((error)=>console.log(error))
+        axios.get('https://mern-fullstack-1-j3k1.onrender.com/findOrder',{withCredentials:true}).then((res)=>setFindOrder(res.data.data)).catch((error)=>console.log(error))
 },[])
 
 
@@ -32,7 +32,7 @@ const cancelProduct=((id,product_Id)=>
     console.log(result)
     if(result.isConfirmed===true) 
     {
-      axios.post(`http://localhost:4000/cancelOrder/${id}`,product_Id,{withCredentials:true}).then((res)=>
+      axios.post(`https://mern-fullstack-1-j3k1.onrender.com/cancelOrder/${id}`,product_Id,{withCredentials:true}).then((res)=>
             {
               
               if(res.data.message==='order cancel successfully')

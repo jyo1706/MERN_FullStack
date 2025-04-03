@@ -26,7 +26,7 @@ function Header({data}) {
  
 // ******************* Logout Method *************************
   function logout() {
-   axios.get("http://localhost:4000/logout", { withCredentials: true }).then((response) => {
+   axios.get("https://mern-fullstack-1-j3k1.onrender.com/logout", { withCredentials: true }).then((response) => {
         if (response.data.message === "logout") {
           navigation("/");
           localStorage.removeItem("username");
