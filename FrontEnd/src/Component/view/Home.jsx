@@ -3,10 +3,10 @@ import  { useContext, useEffect, useState } from 'react'
 import '../../assets/home.css'
 import axios from 'axios';
 import { Link} from 'react-router-dom';
-import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
+
 // Import specific icons from the free solid icon set
-import { faShareNodes} from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+
+
 import { UserContext } from '../Hooks/useContext';
 import ProductHeader from './Admin/product/ProductHeader';
 
@@ -23,7 +23,7 @@ function Home() {
   
 
   useEffect(()=>{
-    axios.get(`http://localhost:4000/home`,{
+    axios.get(`https://mern-fullstack-1-j3k1.onrender.com/home`,{
         withCredentials:true, // This sends cookies with the request
       }).then((response)=>{
           setData(response.data.data);

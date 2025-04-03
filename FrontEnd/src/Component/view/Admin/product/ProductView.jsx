@@ -1,19 +1,17 @@
 import axios from 'axios'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faShareNodes} from '@fortawesome/free-solid-svg-icons';       // Import specific icons from the free solid icon set
-import { faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import { faStar} from '@fortawesome/free-solid-svg-icons';       // Import specific icons from the free solid icon set
 import { useEffect, useState } from 'react';
 import '../../../../assets/productview.css'
-import { ErrorContext } from '../../../Hooks/useContext';
-import { useContext } from 'react';
-import Cookies from 'js-cookie';
 import Swal from 'sweetalert2';
+
 function ProductView() {
    
     // console.log(data)
     const params = useParams()
     const productId = params.id
+  
     const navigator = useNavigate()
    
     const i = 1;
@@ -26,7 +24,7 @@ function ProductView() {
            
           setData(res.data)
         
-          console.log(res.data)
+          // console.log(res.data)
    
         }
         )

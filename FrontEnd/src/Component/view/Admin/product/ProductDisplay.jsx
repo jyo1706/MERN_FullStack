@@ -37,7 +37,7 @@ const location = useLocation();
 
     useEffect(()=>{
             
-              axios.get(`https://mern-fullstack-1-j3k1.onrender.com/displayData`,{
+              axios.get('https://mern-fullstack-1-j3k1.onrender.com/displayData',{
                   withCredentials:true, // This sends cookies with the request
                 }).then((response)=>{
                     

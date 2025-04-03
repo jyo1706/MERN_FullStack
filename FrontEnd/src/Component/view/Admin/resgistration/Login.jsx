@@ -16,7 +16,6 @@ const Login = ({setUserName}) => {
   const navigation = useNavigate()
 
 
-  loginDispatch({type:'user',payload:false})
 //form onsubmit function
    const setData =  ((e)=>
   {
@@ -58,15 +57,17 @@ const Login = ({setUserName}) => {
   };
   useEffect(()=>
   {
+
+  loginDispatch({type:'user',payload:false})
     const user = localStorage.getItem('username')
     if(user)
     {
       navigation('/')
-      if(user) {
-        loginDispatch({ type: "user", payload: true });
-      } else {
-        loginDispatch({ type: "user", payload: false });
-      }
+      // if(user) {
+      //   loginDispatch({ type: "user", payload: true });
+      // } else {
+      //   loginDispatch({ type: "user", payload: false });
+      // }
     }
   })
 

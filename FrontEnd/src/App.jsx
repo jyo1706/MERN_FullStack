@@ -40,7 +40,7 @@ function App() {
   const [search,setSearch] = useState('')
   
 useEffect(()=>{
-    axios.get(`http://localhost:4000/addTocard`, {
+    axios.get(`https://mern-fullstack-1-j3k1.onrender.com/addTocard`, {
     withCredentials: true, // This sends cookies with the request
   }).then((res)=>
     {

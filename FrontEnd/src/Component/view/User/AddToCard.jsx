@@ -26,12 +26,12 @@ function AddToCard() {
 
 // *****************************User All Products in cart*****************************
     useEffect(()=>{
-        axios.get(`https://mern-fullstack-1-j3k1.onrender.com/addTocard`, {
+        axios.get('https://mern-fullstack-1-j3k1.onrender.com/addTocard', {
         withCredentials: true, // This sends cookies with the request
       }).then((res)=>
         {
               setData(res.data)
-         
+               
         }
       )
     .catch((err)=>
