@@ -1,4 +1,4 @@
-const { data } = require('react-router-dom')
+
 const productModel = require('../model/product')
 const AddToCardModel = require('../model/addToCard')
 const addressModel = require('../model/address')
