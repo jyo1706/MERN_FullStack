@@ -259,15 +259,15 @@ class UserController{
                               
                               paymentType:payment[0],
                            }
-                            await insertProduct.save()
+                          
                          )
-                         // if(buyNow)
-                         //   {
-                         //     const price = Math.ceil(buyNow.price-(buyNow.price*buyNow.original_price/100))
-                         //     res.json({message:'order successfully',price:price})
-                         //   }
+                         if(buyNow)
+                           {
+                             const price = Math.ceil(buyNow.price-(buyNow.price*buyNow.original_price/100))
+                             res.json({message:'order successfully',price:price})
+                           }
                            
-                        
+                          await insertProduct.save()
                        
 
                   }
@@ -300,6 +300,7 @@ class UserController{
                         paymentType:JSON.stringify(Object.keys(req.body)),
                      }
                    )
+                    await insertProduct.save()
                    if(orderProduct)
                      {
                        let total = 0;
@@ -311,7 +312,7 @@ class UserController{
                           })
                          res.json({message:'order successfully',price:total})
                      }
-                   await insertProduct.save()
+                  
                    
                     
                 }
