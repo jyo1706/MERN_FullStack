@@ -290,7 +290,7 @@ class UserController{
                           }
                           return order
                        })
-                  console.log(orderproducts)
+                  console.log(orderProducts)
        
                   const insertProduct = new orderModel(
                      {
