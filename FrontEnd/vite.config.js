@@ -8,16 +8,16 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1000, // Increase to 1MB (default is 500KB)
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          // Example: Put all node_modules dependencies in separate chunks
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-        }
-      }
-    }
+    // rollupOptions: {
+    //   output: {
+    //     manualChunks(id) {
+    //       // Example: Put all node_modules dependencies in separate chunks
+    //       if (id.includes('node_modules')) {
+    //         return 'vendor';
+    //       }
+    //     }
+    //   }
+    // }
   }
    
 
