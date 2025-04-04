@@ -10,7 +10,7 @@ import ProductView from './Component/view/Admin/product/ProductView'
 import ProductEdit from './Component/view/Admin/product/ProductEdit'
 import Header from './Component/view/Admin/Header'
 import { BtnContext, CartLength, ErrorContext, PaymentContext, PaymentMethod, QuantityContext, UserContext } from './Component/Hooks/useContext'
-import { useEffect, useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import { BtnReducer,  cartReducer, errorReducer, loginReducer, paymentMethodReducer, paymentReducer, } from './Component/Reducer/reducer'
 import ForgetPassword from './Component/view/Admin/resgistration/ForgetPassword'
 import ResetPassword from './Component/view/Admin/resgistration/ResetPassword'
@@ -26,7 +26,7 @@ import UserOrder from './Component/view/User/UserOrder'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import BuyNow from './Component/view/User/BuyNow';
-
+// const LazyComponent = React.lazy(() => import('./LazyComponent'));
 
 
 function App() {
