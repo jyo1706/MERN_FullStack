@@ -323,21 +323,21 @@ class UserController{
       console.log(error)  
     }
   }
-  static deleteProductFormAddToCard =  async(req,res)=>
-  {
-   try 
-   {
+  // static deleteProductFormAddToCard =  async(req,res)=>
+  // {
+  //  try 
+  //  {
 
-      const data = req.data
-      const id = data.id
-      const a =  await AddToCardModel.deleteMany({admin_id:id})
+  //     const data = req.data
+  //     const id = data.id
+  //     const a =  await AddToCardModel.deleteMany({admin_id:id})
 
-   } 
-   catch (error)
-   {
-      console.log(error)   
-   }
-  }
+  //  } 
+  //  catch (error)
+  //  {
+  //     console.log(error)   
+  //  }
+  // }
   static findOrder = async(req,res)=>
   {
    try 
