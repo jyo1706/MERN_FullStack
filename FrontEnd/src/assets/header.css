@@ -152,7 +152,7 @@ h3{
     }
     .header-inner div:nth-child(2)
     {
-      align-items: start;
+      align-items: center;
     }
     .offcanvas
     {
