@@ -140,7 +140,7 @@ function TotalPrice() {
 
  
   return (
-    {  data.data &&  <div>
+     <div>
         <div className="total">
           <div className="totalContainer">
             <h4>Product Detail</h4>
@@ -175,7 +175,7 @@ function TotalPrice() {
           </div>
         </div>
       </div>
-    }
+ 
   )
 }
 
