@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
-
+import react from '@vitejs/plugin-react'
 import Inspect from 'vite-plugin-inspect';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [Inspect()],
-  // plugins: [react()],
+  // plugins: [Inspect()],
+  plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1000, // Increase to 1MB (default is 500KB)
     rollupOptions: {
