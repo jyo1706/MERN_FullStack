@@ -134,9 +134,13 @@ function TotalPrice() {
   }
   
 })
- if (data) {
-    return (
-      <div>
+
+      
+  
+
+  // If the data is not available (e.g., an empty response), show a fallback message
+  return (
+    <div>
         <div className="total">
           <div className="totalContainer">
             <h4>Product Detail</h4>
@@ -171,11 +175,7 @@ function TotalPrice() {
           </div>
         </div>
       </div>
-    );
-  }
-
-  // If the data is not available (e.g., an empty response), show a fallback message
-  return <div>No data available</div>;
+  )
 }
 
 
