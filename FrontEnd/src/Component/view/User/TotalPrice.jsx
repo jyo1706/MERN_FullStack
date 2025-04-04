@@ -140,7 +140,10 @@ function TotalPrice() {
 
  
   return (
-     <div>
+      <>
+   {
+    data.data &&
+        <div>
         <div className="total">
           <div className="totalContainer">
             <h4>Product Detail</h4>
@@ -165,7 +168,7 @@ function TotalPrice() {
                   You Save : {totalDiscount(data.data)-totalPrice(data.data)}
                 </h6>
                 <span className="btnHeading">
-                  Clicking on 'Continue' will not deduct any money
+                  Clicking on Continue will not deduct any money
                 </span>
               <Link to={`/addAddress/${productId}`}> {btnState && <button className="form-button d-block my-2 conBtn" onClick={()=>{btnDispatch({type:"btn",payload:false});updateQuantity()}}>Continue</button>}</Link> 
                       {<form action={placeOrder} method='post'>{paymentState===false && <button className="form-button d-block my-2 conBtn" onClick={()=>localStorage.getItem('BuyNow')}>Continue1</button>}</form>}
@@ -175,7 +178,8 @@ function TotalPrice() {
           </div>
         </div>
       </div>
- 
+   } 
+    </>
   )
 }
 
