@@ -5,7 +5,7 @@ const productModel = require('../model/product')
 const router = express.Router()
 const auth = require('../MiddleWare/auth')
 const UserController  = require('../controller/UserController')
-const { Router } = require('react-router-dom')
+
 const isLogin = require('../MiddleWare/isLogin')
 
 router.post('/res',AdminController.res)
