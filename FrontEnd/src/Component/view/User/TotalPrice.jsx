@@ -140,7 +140,7 @@ function TotalPrice() {
 
   // If the data is not available (e.g., an empty response), show a fallback message
   return (
-    {  data &&  <div>
+    {  data.data &&  <div>
         <div className="total">
           <div className="totalContainer">
             <h4>Product Detail</h4>
