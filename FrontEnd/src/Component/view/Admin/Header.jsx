@@ -104,9 +104,9 @@ function Header({data}) {
                                <Link to="/" type="button" >
                                  <li className="text-reset mt-2" data-bs-dismiss="offcanvas"><h6>Home</h6></li>
                                </Link>
-                               <Link to="/orders">{loginState && <li className="text-reset mt-2" data-bs-dismiss="offcanvas">myOrder</li>}</Link>
-                               {role==='user' && <Link to='/addToCard'><li className="text-reset mt-2" data-bs-dismiss="offcanvas"><span >{data>=1 && <sup className="cartSub"><span>{data}</span></sup>}</span><span>Cart</span></li></Link>}
-                               <Link to="">{loginState && <li>{userName}</li>}</Link>
+                               <Link to="/orders">{loginState && <li className="text-reset mt-2" data-bs-dismiss="offcanvas"><h6>MyOrders</h6></li>}</Link>
+                               {role==='user' && <Link to='/addToCard'><li className="text-reset mt-2" data-bs-dismiss="offcanvas"><span >{data>=1 && <sup className="cartSub"><span>{data}</span></sup>}</span><span><h6>Cart</h6></span></li></Link>}
+                               <Link to="">{loginState && <li><h6>{userName}</h6></li>}</Link>
                                
                                {loginState ? (
                                  <Link  type="submit" onClick={logout} className="w-100">

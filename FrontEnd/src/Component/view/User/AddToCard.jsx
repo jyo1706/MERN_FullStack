@@ -8,6 +8,7 @@ import TotalPrice from './TotalPrice'
 import { BtnContext, CartLength, PaymentContext, QuantityContext } from '../../Hooks/useContext';
 
 import Swal from 'sweetalert2';
+import Loader from 'rsuite/esm/Loader';
 
 function AddToCard() {
  
@@ -76,7 +77,9 @@ localStorage.setItem('BuyNow','true')
     
 return (
   <>
-    {
+  {
+    data.data && data.data ? 
+    
       data.data && data.data.length<1 ?
       <div className='container cartEmpty'><div className=''><h5 className='text-center'>Cart is empty</h5><Link to='/'><button className='btn btn-primary'>Continue Shopping</button></Link></div></div>
       :<div className='productDetailContainer container'>
@@ -124,7 +127,11 @@ return (
             <TotalPrice/>
           </div>
       </div>
-    }
+    
+    :
+    <div className='text-center mt-5'><Loader/></div>
+  }
+    
   </>
   )
 }

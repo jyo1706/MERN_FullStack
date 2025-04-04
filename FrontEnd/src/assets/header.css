@@ -162,17 +162,27 @@ h3{
     .offcanvas-body,  .offcanvas-body ul,li
     {
          width:100%;
-      
+         padding-inline:0;
     }
     .offcanvas ul
     {
       padding-inline: 0;
-      
+      display: flex;
+      flex-direction: column;
+      padding-block: 0px;
     }
     .offcanvas li
     {
+      
+      border-bottom:1px solid grey;
+      padding-inline: 0;
+    }
+    .offcanvas li h6
+    {
       padding-block:15px;
       margin-top:0 !important;
+      padding-inline:10px;
+     
     }
     .cartSub
    {

@@ -6,6 +6,7 @@ import TotalPrice from "./TotalPrice";
 import { BtnContext,    PaymentContext } from "../../Hooks/useContext";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import Loader from "rsuite/esm/Loader";
 
 
 function AddAddress() {
@@ -93,7 +94,8 @@ function AddAddress() {
 
   return (
     <>
-   
+    {
+      findAddress ? 
       <div className="productDetailContainer container">
         <div className="product">
        {addAddress && findAddress && findAddress.length >= 1 ? (
@@ -260,6 +262,10 @@ function AddAddress() {
           </div>
           
       </div>
+      :
+      <div className="text-center mt-5"><Loader/></div>
+    }
+      
      
     </>
     

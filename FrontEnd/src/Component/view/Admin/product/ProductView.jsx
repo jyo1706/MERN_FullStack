@@ -5,6 +5,8 @@ import { faStar} from '@fortawesome/free-solid-svg-icons';       // Import speci
 import { useEffect, useState } from 'react';
 import '../../../../assets/productview.css'
 import Swal from 'sweetalert2';
+import Loader from 'rsuite/Loader';
+import 'rsuite/Loader/styles/index.css';
 
 function ProductView() {
    
@@ -78,8 +80,8 @@ function ProductView() {
 
   return (
    <>
- 
-    <div className='container-fluid productViewContainer mt-5'>
+    {data.data && data.data ?
+      <div className='container-fluid productViewContainer mt-5'>
           <div className='productImages'>
              <img src={data.data && data.data.image.url}/>
              <img src={data.data && data.data.image.url}/>
@@ -109,6 +111,10 @@ function ProductView() {
        
         
     </div>
+    :
+    <div className="text-center m-5 " ><Loader className='loader'/></div>
+    }
+    
    </>
   )
 }

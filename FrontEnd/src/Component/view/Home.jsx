@@ -3,7 +3,8 @@ import  { useContext, useEffect, useState } from 'react'
 import '../../assets/home.css'
 import axios from 'axios';
 import { Link} from 'react-router-dom';
-
+import Loader from 'rsuite/Loader';
+import 'rsuite/Loader/styles/index.css';
 // Import specific icons from the free solid icon set
 
 
@@ -47,6 +48,9 @@ const filterData = data.filter((item) =>
   return (
     <>
     <ProductHeader/>
+    {
+      filterData != '' ? 
+    
      <div className='container'>
      <div className="homeCardContainer">
      {
@@ -87,6 +91,9 @@ const filterData = data.filter((item) =>
           
      </div>
      </div>
+     : 
+     <div className="text-center m-5 " ><Loader className='loader'/></div>
+    }
     </>
   )
 }

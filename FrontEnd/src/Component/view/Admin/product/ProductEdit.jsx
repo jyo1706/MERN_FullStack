@@ -2,7 +2,8 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext } from "../../../Hooks/useContext";
-
+import Loader from 'rsuite/Loader';
+import 'rsuite/Loader/styles/index.css';
 
 function ProductEdit() {
   const [data, setData] = useState({});
@@ -60,7 +61,8 @@ function ProductEdit() {
 
   return (
     <>
-  
+    {
+      data ?
       <div className="main">
         {/* Edit Div Start */}
         <div className="bg-white res-container pt-1 p-3">
@@ -145,6 +147,10 @@ function ProductEdit() {
         </div>
         {/* Edit Div End */}
       </div>
+      :
+      <div className='text-center mt-5'><Loader/></div>
+    }
+      
     </>
   );
 }

@@ -91,6 +91,7 @@ function BuyNow() {
 return (
     
     <>
+   
      <div className='review'>
         <div className='text-center'>
                <h6>1</h6>
@@ -188,7 +189,10 @@ return (
         </div>
           </div>
     </div>
+    
     }
+ 
+   
     </>
   )
 }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import Loader from 'rsuite/esm/Loader';
 
 import Swal from 'sweetalert2';
 
@@ -57,6 +58,8 @@ const cancelProduct=((id,product_Id)=>
 
   return(
   <>
+  {
+    findOrder?
     <div className='container-fluid w-75  my-5 table-container'>
 
 <h1 className='text-center text-blue m-auto' style={{backgroundColor:"688bf9"}}>Order Products</h1>
@@ -98,6 +101,10 @@ const cancelProduct=((id,product_Id)=>
     </table>
   
     </div>
+    :
+    <div className='text-center mt-5'><Loader/></div>
+  }
+   
   </>
     
   )

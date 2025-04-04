@@ -41,6 +41,10 @@ a
 ul{
   list-style: none;
 }
+.loader
+{
+  color:var(--color);
+}
 input
 {
   padding:5px;
