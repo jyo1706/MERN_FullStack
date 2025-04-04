@@ -222,7 +222,7 @@ class UserController{
                else
                {
                   const data = req.data
-                  const orderProduct = await  AddToCardModel.findById({admin_id:data._id}); 
+                  const orderProduct = await  AddToCardModel.find({admin_id:data._id}); 
                   const buyNow = await productModel.findById(payment[1])
                   const selectAddress = await addressModel.find({_id:req.params.id})
                   console.log(orderProduct)
