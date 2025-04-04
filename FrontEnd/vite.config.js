@@ -6,8 +6,8 @@ import Inspect from 'vite-plugin-inspect';
 export default defineConfig({
   // plugins: [Inspect()],
   plugins: [react()],
-  build: {
-    chunkSizeWarningLimit: 1000, // Increase to 1MB (default is 500KB)
+  // build: {
+  //   chunkSizeWarningLimit: 1000, // Increase to 1MB (default is 500KB)
     // rollupOptions: {
     //   output: {
     //     manualChunks(id) {
