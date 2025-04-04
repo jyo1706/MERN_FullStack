@@ -83,12 +83,17 @@ function TotalPrice() {
                      });
                      navigator('/');
                      localStorage.removeItem('page')
-        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{cartDispatch({type:'cart',payload:true});
+        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
+          cartDispatch({type:'cart',payload:true});
+          if(res)
+          {
+             //  Method for delete Product for after order Place
+                axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
+          }
       })
       .catch((err)=>console.log(err))
         
-           //  Method for delete Product for after order Place
-                axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
+          
                 }
               }
               const rzp = window.Razorpay(option);
