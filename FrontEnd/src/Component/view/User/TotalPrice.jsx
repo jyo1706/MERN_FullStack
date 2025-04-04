@@ -51,14 +51,14 @@ function TotalPrice() {
    }
   }
   // If still loading, show a loading message
-  if (loading) {
-    return  <div className='text-center mt-5'><Loader/></div>;
-  }
+  // if (loading) {
+  //   return  <div className='text-center mt-5'><Loader/></div>;
+  // }
 
   // If there's an error, show the error message
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 //  METHOD FOR PLACE ORDER
  const placeOrder=(()=> {
   if(paymentMethodState!=undefined)
@@ -137,8 +137,16 @@ function TotalPrice() {
  
 
   // Ensure data is defined before using it in calculations
-  if (data) {
-    return (
+  
+   
+   
+  
+
+  // If the data is not available (e.g., an empty response), show a fallback message
+  return (
+    {
+      data && 
+      
       <div>
         <div className="total">
           <div className="totalContainer">
@@ -174,11 +182,8 @@ function TotalPrice() {
           </div>
         </div>
       </div>
-    );
-  }
-
-  // If the data is not available (e.g., an empty response), show a fallback message
-  return <div>No data available</div>;
+    }
+    )
 }
 
 export default TotalPrice;
