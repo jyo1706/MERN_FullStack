@@ -5,7 +5,7 @@ import { useQuantity } from '../../Hooks/useQuantity';
 import Swal from 'sweetalert2';
 import { BtnContext,  CartLength,  PaymentContext, PaymentMethod, QuantityContext } from '../../Hooks/useContext';
 import { cartReducer } from '../../Reducer/reducer';
-
+import Loader from 'rsuite/esm/Loader';
 
 function TotalPrice() {
   const params = useParams();
@@ -52,7 +52,7 @@ function TotalPrice() {
   }
   // If still loading, show a loading message
   if (loading) {
-    return <div>Loading...</div>;
+    return  <div className='text-center mt-5'><Loader/></div>;
   }
 
   // If there's an error, show the error message
