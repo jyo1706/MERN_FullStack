@@ -16,11 +16,22 @@ function Home() {
   const {search} = useContext(UserContext)
   const [time,setTime] = useState(new Date())
  
-
-    // setInterval(()=>
-    // {
-    //   console.log(time)
-    // })
+useEffect(()=>
+{
+    const order = localStorage.getItem('order')
+      if(order)
+      {
+        Swal.fire({
+          title: order,
+          icon: 'warning',
+     
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'ok!',
+      }
+)}
+localStorage.removeItem('order')
+},[])
   
 
   useEffect(()=>{

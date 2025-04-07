@@ -85,13 +85,13 @@ function TotalPrice() {
             
         axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
           cartDispatch({type:'cart',payload:true});
+          localStorage.setItem('order','Order Place Successfully')
           if(res)
           {
              //  Method for delete Product for after order Place
            
                 axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
-           
-                     localStorage.removeItem('page')
+                localStorage.removeItem('page')
           }
       })
       .catch((err)=>console.log(err))
@@ -119,6 +119,7 @@ function TotalPrice() {
       {
        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
          navigator('/');
+         localStorage.setItem('order','Order Place Successfully')
          if(res)
          {
              axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
