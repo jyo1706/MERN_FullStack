@@ -275,6 +275,7 @@ class UserController{
                else
                 {
                   //Buy product of addtocard
+                   console.log(orderProduct)
                   const orderProducts =   orderProduct.map((item)=>
                      {
                           const order = {
