@@ -117,12 +117,18 @@ function TotalPrice() {
 
       else
       {
-       axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{navigator('/');cartDispatch({type:'cart',payload:true});
+       axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
+         navigator('/');
+         if(res)
+         {
+             axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
+         }
+         cartDispatch({type:'cart',payload:true});
       })
       .catch((err)=>console.log(err))
          
       
-        axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
+      
        
       }
   }
