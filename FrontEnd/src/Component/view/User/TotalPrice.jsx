@@ -12,7 +12,7 @@ function TotalPrice() {
   const productId = params.id;
   const navigator = useNavigate();
   const { totalDiscount, totalPrice} = useQuantity();
-  const [data, setData] = useState(null);            // Changed initial state to null for better checking
+
   const [loading, setLoading] = useState(true);      // Loading state
   const [error, setError] = useState(null);          // Error state
   const{btnState,btnDispatch}  =   useContext(BtnContext)
@@ -40,7 +40,7 @@ function TotalPrice() {
         navigator('/login');
       });
   }, [productId, navigator]);
-
+  const [data, setData] = useState(null);            // Changed initial state to null for better checking
   //UPDATE QUANTITY METHOD
   function updateQuantity()
   {
