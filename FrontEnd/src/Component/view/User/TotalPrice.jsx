@@ -179,6 +179,32 @@ function TotalPrice() {
       :
       <div className='total'>
         <div className='totalContainer'>
+           <h4></h4>
+            <div className="totalPrice">
+              <h5 style={{borderBottom:'2px dotted grey'}}></h5>
+              <span ></span> 
+        
+            </div>
+            <div className="totalPrice mb-0" style={{color:'green'}}>
+              <h5 style={{color:'green',borderBottom:'2px dotted green'}}></h5>
+              <span></span> 
+            </div>
+            <hr />
+            <div className="order">
+              <h5></h5>
+             <span></span>
+            </div>
+            <div>
+              <h6 className="text-center text-success">
+                 
+                </h6>
+                <span className="btnHeading">
+                  Clicking on Continue will not deduct any money
+                </span>
+              <Link> </Link> 
+                     
+     
+            </div>
         </div>
       </div>
    } 
