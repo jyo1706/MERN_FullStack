@@ -77,7 +77,7 @@ const placeOrder=(()=> {
               handler:function(res)
               {
                 Swal.fire({
-                      title: 'Payment Done and order place successfully',
+                      title: 'Order place and Payment Done ,successfully',
                       icon: 'success',
                     
                       confirmButtonColor: '#3085d6',

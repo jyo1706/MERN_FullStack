@@ -74,7 +74,7 @@ function TotalPrice() {
                 handler:function(res)
                 {
                   Swal.fire({
-                        title: 'Payment Done and order Place successfully',
+                        title: 'Order place and Payment Done ,successfully',
                         icon: 'success',
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
