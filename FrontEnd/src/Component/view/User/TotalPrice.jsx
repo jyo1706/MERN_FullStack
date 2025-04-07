@@ -117,8 +117,11 @@ function TotalPrice() {
        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{navigator('/');cartDispatch({type:'cart',payload:true});
       })
       .catch((err)=>console.log(err))
-        
+           const page = localStorage.get('page')
+        if(page!='buynow')
+        {
         axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
+        }
       }
   }
   else
