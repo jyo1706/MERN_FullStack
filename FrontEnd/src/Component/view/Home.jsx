@@ -10,6 +10,7 @@ import 'rsuite/Loader/styles/index.css';
 
 import { UserContext } from '../Hooks/useContext';
 import ProductHeader from './Admin/product/ProductHeader';
+import Swal from 'sweetalert2';
 
 function Home() {
   const [data,setData] = useState([])
