@@ -199,4 +199,19 @@ select:focus
     {
         width: 300px;
     }
+ 
+}
+@media (max-width:390px)
+{
+ .productItem
+{
+  flex-direction:column;
+ 
+}
+ .productImg
+ {
+  display:flex;
+  align-item:center;
+  
+ }
 }
