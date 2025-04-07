@@ -61,7 +61,7 @@ class AdminController
                     }
         
                     const token = jwt.sign({ ID: data._id }, "##user##1706");
-                    // console.log(token);
+                    console.log('login',token);
         
                     // Set token in cookie
                     res.cookie("token", token, {
