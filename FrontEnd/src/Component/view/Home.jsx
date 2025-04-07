@@ -10,29 +10,14 @@ import 'rsuite/Loader/styles/index.css';
 
 import { UserContext } from '../Hooks/useContext';
 import ProductHeader from './Admin/product/ProductHeader';
-import Swal from 'sweetalert2';
+
 
 function Home() {
   const [data,setData] = useState([])
   const {search} = useContext(UserContext)
   const [time,setTime] = useState(new Date())
  
-useEffect(()=>
-{
-    const order = localStorage.getItem('order')
-      if(order)
-      {
-        Swal.fire({
-          title: order,
-          icon: 'warning',
-     
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'ok!',
-      }
-)}
-localStorage.removeItem('order')
-},[])
+
   
 
   useEffect(()=>{

@@ -74,9 +74,8 @@ function TotalPrice() {
                 handler:function(res)
                 {
                   Swal.fire({
-                        title: 'Payment Done',
+                        title: 'Payment Done and order Place successfully',
                         icon: 'success',
-                      
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
                         confirmButtonText: 'ok!',
@@ -85,7 +84,8 @@ function TotalPrice() {
             
         axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
           cartDispatch({type:'cart',payload:true});
-          localStorage.setItem('order','Order Place Successfully')
+         
+
           if(res)
           {
              //  Method for delete Product for after order Place
@@ -120,6 +120,15 @@ function TotalPrice() {
        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
          navigator('/');
          localStorage.setItem('order','Order Place Successfully')
+         Swal.fire({
+          title: order,
+          icon: 'success',
+        
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'ok!',
+       });
+       localStorage.removeItem('order')
          if(res)
          {
              axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
