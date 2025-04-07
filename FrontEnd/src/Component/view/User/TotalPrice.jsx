@@ -142,7 +142,7 @@ function TotalPrice() {
   return (
       <>
    {
-    {
+    
     data.data ?
       <div>
         <div className="total">
