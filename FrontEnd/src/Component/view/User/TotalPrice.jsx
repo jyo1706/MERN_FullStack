@@ -119,7 +119,8 @@ function TotalPrice() {
       {
        axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
          navigator('/');
-         localStorage.setItem('order','Order Place Successfully')
+          localStorage.setItem('order','Order Place Successfully')
+          const order = localStorage.getItem('order')
          Swal.fire({
           title: order,
           icon: 'success',

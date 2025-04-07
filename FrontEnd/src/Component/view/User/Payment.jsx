@@ -77,7 +77,7 @@ const placeOrder=(()=> {
               handler:function(res)
               {
                 Swal.fire({
-                      title: 'Payment Done',
+                      title: 'Payment Done and order place successfully',
                       icon: 'success',
                     
                       confirmButtonColor: '#3085d6',
@@ -109,6 +109,17 @@ const placeOrder=(()=> {
        {
         axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${findAddress._id}`,obj,{withCredentials:true})
         .then((res)=>{navigator('/');
+          localStorage.setItem('order','Order Place Successfully')
+          const order = localStorage.getItem('order')
+         Swal.fire({
+          title: order,
+          icon: 'success',
+        
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'ok!',
+       });
+       localStorage.removeItem('order')
          localStorage.removeItem('page'); quantityDispatch({type:'reset'});}).catch((err)=>console.log(err.message))
          
          // axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
