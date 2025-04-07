@@ -40,7 +40,7 @@ function TotalPrice() {
         navigator('/login');
       });
   }, [productId, navigator]);
-  const [data, setData] = useState(null);            // Changed initial state to null for better checking
+          // Changed initial state to null for better checking
   //UPDATE QUANTITY METHOD
   function updateQuantity()
   {
@@ -135,15 +135,16 @@ function TotalPrice() {
   
 })
 
-      
+     const [data, setData] = useState([]);     
   
 
  
   return (
       <>
    {
-    data.data && data.data
-        <div>
+    {
+    data.data ?
+      <div>
         <div className="total">
           <div className="totalContainer">
             <h4>Product Detail</h4>
@@ -161,9 +162,7 @@ function TotalPrice() {
               <h5>Order Total:</h5>
              <span>₹{totalDiscount(data.data)}</span>
             </div>
-          
-           
-              <div>
+            <div>
               <h6 className="text-center text-success">
                   You Save : {totalDiscount(data.data)-totalPrice(data.data)}
                 </h6>
@@ -173,10 +172,13 @@ function TotalPrice() {
               <Link to={`/addAddress/${productId}`}> {btnState && <button className="form-button d-block my-2 conBtn" onClick={()=>{btnDispatch({type:"btn",payload:false});updateQuantity()}}>Continue</button>}</Link> 
                       {<form action={placeOrder} method='post'>{paymentState===false && <button className="form-button d-block my-2 conBtn" onClick={()=>localStorage.getItem('BuyNow')}>Continue1</button>}</form>}
      
-              </div>
-           
+            </div>
           </div>
         </div>
+      </div>
+      :
+      <div className=''>
+        
       </div>
    } 
     </>
