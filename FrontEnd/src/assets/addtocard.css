@@ -201,7 +201,7 @@ select:focus
     }
  
 }
-@media (max-width:390px)
+@media (max-width:425px)
 {
  .productItem
 {
@@ -212,6 +212,6 @@ select:focus
  {
   display:flex;
   align-item:center;
-  
+  justify-content:center;
  }
 }
