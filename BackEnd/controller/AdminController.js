@@ -67,7 +67,7 @@ class AdminController
                     res.cookie("token", token, {
                         expires: new Date(Date.now() + 25892000000),  // Cookie expiration (30 days)
                         httpOnly: true,  // Prevent access from JavaScript (XSS protection)
-                        secure: false,   // Allow cookies over HTTP in development
+                        secure: true,   // Allow cookies over HTTP in development
                         sameSite: 'Lax', // Prevent cross-site requests
                     });
                    
