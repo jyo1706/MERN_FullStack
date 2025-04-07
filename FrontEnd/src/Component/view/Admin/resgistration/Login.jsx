@@ -62,12 +62,12 @@ const Login = ({setUserName}) => {
     const user = localStorage.getItem('username')
     if(user)
     {
-      navigation('/')
-      // if(user) {
-      //   loginDispatch({ type: "user", payload: true });
-      // } else {
-      //   loginDispatch({ type: "user", payload: false });
-      // }
+      // navigation('/')
+      if(user) {
+        loginDispatch({ type: "user", payload: true });
+      } else {
+        loginDispatch({ type: "user", payload: false });
+      }
     }
   })
 
