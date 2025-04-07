@@ -82,7 +82,7 @@ function TotalPrice() {
                         confirmButtonText: 'ok!',
                      });
                      navigator('/');
-                     localStorage.removeItem('page')
+            
         axios.post(`https://mern-fullstack-1-j3k1.onrender.com/placeOrder/${productId}`,paymentMethodState,{withCredentials:true}).then((res)=>{
           cartDispatch({type:'cart',payload:true});
           if(res)
@@ -93,6 +93,7 @@ function TotalPrice() {
               {
                 axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
               }
+                     localStorage.removeItem('page')
           }
       })
       .catch((err)=>console.log(err))
