@@ -19,7 +19,7 @@ app.use(flash());
 app.use(express.urlencoded({extended:true}))
 app.use(fileUpload({useTempFiles:true}))
 app.use(cors({
-    origin: 'https://mern-fullstack-2.onrender.com',  // Vite (React) frontend
+    origin: 'http://mern-fullstack-2.onrender.com',  // Vite (React) frontend
     credentials: true,  // Allow cookies to be sent
 }));
 app.use(session({
