@@ -201,7 +201,7 @@ select:focus
     }
  
 }
-@media (max-width:425px)
+@media (max-width:500px)
 {
  .productItem
 {
