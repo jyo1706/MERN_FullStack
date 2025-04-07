@@ -38,7 +38,7 @@ router.post('/placeOrder/:id',auth,UserController.placeOrder)
 router.post('/updateQuantity',auth,UserController.updateQuantity)
 router.get('/findOrder',auth,UserController.findOrder)
 router.post('/cancelOrder/:id',auth,UserController.cancelOrder)
-router.get('/buynow/:id',UserController.buyNow)
+router.get('/buynow/:id',auth,UserController.buyNow)
 router.post('onlinePay',auth,UserController.onlinePay)
 router.get('/deleteProductFormAddToCard',auth,UserController.deleteProductFormAddToCard)
 module.exports = router 
