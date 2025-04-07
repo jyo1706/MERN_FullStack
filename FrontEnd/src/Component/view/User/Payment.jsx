@@ -111,7 +111,7 @@ const placeOrder=(()=> {
         .then((res)=>{navigator('/');
          localStorage.removeItem('page'); quantityDispatch({type:'reset'});}).catch((err)=>console.log(err.message))
          
-         axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
+         // axios.get('https://mern-fullstack-1-j3k1.onrender.com/deleteProductFormAddToCard',{withCredentials:true})
        }    
       
     
