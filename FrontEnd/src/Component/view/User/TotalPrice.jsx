@@ -177,8 +177,9 @@ function TotalPrice() {
         </div>
       </div>
       :
-      <div className=''>
-        
+      <div className='total'>
+        <div className='totalContainer'>
+        </div>
       </div>
    } 
     </>
