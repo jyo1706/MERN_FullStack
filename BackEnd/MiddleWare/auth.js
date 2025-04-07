@@ -6,7 +6,7 @@ const auth = async(req,res,next)=>
 {   
     // console.log("hello")
     const token = req.cookies.token
-    console.log(token)
+    // console.log(token)
     try
     {
         if(token)                     
