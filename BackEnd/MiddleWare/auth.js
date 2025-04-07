@@ -5,7 +5,7 @@ const RegistrationModel = require('../model/registration')
 const auth = async(req,res,next)=>
 {   
     // console.log("hello")
-    const token = req.cookies.token
+    const {token} = req.cookies.token
     // console.log(token)
     try
     {
