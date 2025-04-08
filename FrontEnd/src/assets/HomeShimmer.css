@@ -2,10 +2,12 @@
 {
     height: 350px !important;
     background-color: #ccc!important;
+    align-items: center !important;
 }
 .shimmerCard div 
 {
     background-color:#9e9c9c;
+    width:85% !important;
 }
 .shimmerCard div:nth-child(2)
 {
