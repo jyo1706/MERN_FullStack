@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../assets/homeShimmer.css'
+import '../../assets/homeShimmer.css'
 function HomeShimmer() {
 
     const mapped = Array.from({length:10}).map((val,i)=>
