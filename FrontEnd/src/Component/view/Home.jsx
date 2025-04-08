@@ -59,7 +59,7 @@ const filterData = data.filter((item) =>
              <Link to={`/productView/${data1._id}`} key={inx}>
               <div className='homeCard'>
                       <div className='text-center'>
-                           <img src={data1.image.url} alt={data1.name}/>
+                           <img src={data1.image.url} alt={data1.name} lading='lazy'/>
                       </div>
                       
                       <div className='mb-1 cardDetail'>
