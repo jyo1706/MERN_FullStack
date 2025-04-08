@@ -5,21 +5,21 @@ function HomeShimmer() {
   return (
 
 <div className='container'>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
-    <div className="homeCardContainer"><div className='shimmercard homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
+    <div className="homeCardContainer shimmercard"><div className='homeCard'></div></div>
 </div>
   )
 }
