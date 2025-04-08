@@ -1,0 +1,1 @@
+import"./vendor-D_SluWwt.js";let d={};const p=1,y=(r=p,e)=>e.type==="decrement"?{...r,[e.payload]:(r[e.payload]||1)>1?r[e.payload]-1:1}:e.type==="increment"?{...r,[e.payload]:(r[e.payload]||1)+1}:e.type==="reset"?p:r;export{y as QuantityReducer,d as totalData};
