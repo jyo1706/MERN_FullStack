@@ -22,7 +22,7 @@ const AddAddress     =lazy(()=>import('./Component/view/User/AddAddress'))
 const Payment        =lazy(()=>import('./Component/view/User/Payment'))
 const QuantityReducer = lazy(()=>import('./Component/Reducer/quantityReducer'))
 const EditAddress = lazy(()=>import('./Component/view/User/EditAddress')) 
-const UserOrder = import('./Component/view/User/UserOrder')
+const UserOrder = lazy(()=>import('./Component/view/User/UserOrder'))
 
 const BuyNow = lazy(()=>import('./Component/view/User/BuyNow'))
 // const LazyComponent = React.lazy(() => import('./LazyComponent'));
