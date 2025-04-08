@@ -2,6 +2,7 @@ import axios from 'axios'
 import  {useContext, useEffect, useState } from 'react'
 import {  Link, useNavigate, useParams} from 'react-router-dom'
 import '../../../assets/buyNow.css'
+import '../../../assets/addtocard.css'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BtnContext,   QuantityContext } from '../../Hooks/useContext';
