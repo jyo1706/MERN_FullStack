@@ -6,7 +6,7 @@ import Loader from 'rsuite/Loader';
 import 'rsuite/Loader/styles/index.css';
 import { UserContext } from '../Hooks/useContext';
 import ProductHeader from './Admin/product/ProductHeader';
-import HomeShimmer from '.ShimmerEffect/HomeShimmer'
+import HomeShimmer from './ShimmerEffect/HomeShimmer'
 
 function Home() {
   const [data,setData] = useState([])
