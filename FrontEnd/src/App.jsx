@@ -65,7 +65,7 @@ return (
       
          
           <Route path="/" element={<Home/>}/>
-        <Suspense fallback={<div className=''></div>}>  
+        
           <Route path='/login' element={<Login/>}/>
           <Route path="/registration" element={<Registration/>}/>
           <Route path="/product" element={<UserDashboard/>}/>
@@ -85,7 +85,7 @@ return (
           <Route path='/editAddress/:id' element={<EditAddress/>}/>
           <Route path='/orders' element={<UserOrder/>}/>
           <Route path='/buynow/:id' element={<BuyNow/>}/>
-          </Suspense>
+          
          
 
 
