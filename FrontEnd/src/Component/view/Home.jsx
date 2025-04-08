@@ -59,7 +59,7 @@ const filterData = data.filter((item) =>
                       </div>
                       
                       <div className='mb-1 cardDetail'>
-                        <span><h6 className='cardHeading'>{data1.name}</h6></span>
+                        <span><h6 className='cardHeading text-center'>{data1.name}</h6></span>
                         <div className='cardPrice'> 
                               <span>₹{Math.ceil(data1.price-(data1.price*data1.original_price/100))}</span>
                               <span><del>₹{data1.price}</del></span>
