@@ -29,4 +29,13 @@
     margin-top: 10px !important;
     margin-left: 0px !important;
     margin-bottom: 2px;
+    animation: moveLeftToRight 2s ease-in-out infinite; 
 }
+@keyframes moveLeftToRight {
+    0% {
+      transform: translateX(0); /* Starting position */
+    }
+    100% {
+      transform: translateX(100%); /* Ending position (100% of the container width) */
+    }
+  }
