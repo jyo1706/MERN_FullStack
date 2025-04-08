@@ -88,7 +88,7 @@ const filterData = data.filter((item) =>
      </div>
      </div>
      : 
-    <HomeShimmer/>
+     <HomeShimmer/>
     }
     </>
   )
