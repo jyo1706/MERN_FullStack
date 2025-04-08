@@ -35,6 +35,7 @@ function Home() {
              
           })
 },[])
+
 const filterData = data.filter((item) =>
     item.name.includes(search.charAt(0).toUpperCase()+search.slice(1))
  
@@ -60,6 +61,7 @@ const filterData = data.filter((item) =>
                       <div className='text-center'>
                            <img src={data1.image.url} alt={data1.name}/>
                       </div>
+                      
                       <div className='mb-1 cardDetail'>
                         <span><h6 className='cardHeading'>{data1.name}</h6></span>
                         <div className='cardPrice'> 
@@ -75,6 +77,7 @@ const filterData = data.filter((item) =>
                          <FontAwesomeIcon className = 'icon' icon={faWhatsapp} style={{color:"green"}}/> */}
                          </div>
                       </div>
+                     
              </div>
              </Link>
              ) 

@@ -14,9 +14,9 @@ import React, { useEffect, useReducer } from 'react'
 import { BtnReducer,  cartReducer, errorReducer, loginReducer, paymentMethodReducer, paymentReducer, } from './Component/Reducer/reducer'
 import ForgetPassword from './Component/view/Admin/resgistration/ForgetPassword'
 import ResetPassword from './Component/view/Admin/resgistration/ResetPassword'
-import Home from './Component/view/Home'
+const Home = lazy(()=>import( './Component/view/Home'))
 import AddToCard from './Component/view/User/AddToCard';
-import { useState } from 'react';
+import { useState,lazy,Suspense } from 'react';
 import UserAddress from './Component/view/User/UserAddress';
 import AddAddress from './Component/view/User/AddAddress';
 import Payment from './Component/view/User/Payment';
@@ -63,8 +63,10 @@ return (
     
       <Routes>
       
-          <Route path='/login' element={<Login/>}/>
+         
           <Route path="/" element={<Home/>}/>
+          <Suspense fallback={<div className=''></div>}>
+          <Route path='/login' element={<Login/>}/>
           <Route path="/registration" element={<Registration/>}/>
           <Route path="/product" element={<UserDashboard/>}/>
           <Route path="/displayData" element={<ProductDisplay/>}/>
@@ -83,6 +85,7 @@ return (
           <Route path='/editAddress/:id' element={<EditAddress/>}/>
           <Route path='/orders' element={<UserOrder/>}/>
           <Route path='/buynow/:id' element={<BuyNow/>}/>
+          </Suspense>
           </Routes>
        
           </CartLength.Provider>
@@ -91,7 +94,7 @@ return (
           </PaymentContext.Provider>
           </BtnContext.Provider>
           </UserContext.Provider>
-      
+        
   </>
   )
 }
