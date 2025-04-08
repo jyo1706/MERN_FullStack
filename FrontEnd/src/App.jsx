@@ -2,32 +2,31 @@ import { Route, Routes} from 'react-router-dom'
 import './App.css'
 import './assets/home.scss'
 import 'react-toastify/dist/ReactToastify.css'; 
-import Login from './Component/view/Admin/resgistration/Login'
-import Registration from './Component/view/Admin/resgistration/Registration'
-import UserDashboard from './Component/view/Admin/product/Product'
-import ProductDisplay from './Component/view/Admin/product/ProductDisplay'
-import ProductView from './Component/view/Admin/product/ProductView'
-import ProductEdit from './Component/view/Admin/product/ProductEdit'
-import Header from './Component/view/Admin/Header'
 import { BtnContext, CartLength, ErrorContext, PaymentContext, PaymentMethod, QuantityContext, UserContext } from './Component/Hooks/useContext'
 import React, { useEffect, useReducer } from 'react'
 import { BtnReducer,  cartReducer, errorReducer, loginReducer, paymentMethodReducer, paymentReducer, } from './Component/Reducer/reducer'
-import ForgetPassword from './Component/view/Admin/resgistration/ForgetPassword'
-import ResetPassword from './Component/view/Admin/resgistration/ResetPassword'
-const Home = lazy(()=>import( './Component/view/Home'))
-import AddToCard from './Component/view/User/AddToCard';
-import { useState,lazy,Suspense } from 'react';
-import UserAddress from './Component/view/User/UserAddress';
-import AddAddress from './Component/view/User/AddAddress';
-import Payment from './Component/view/User/Payment';
-import { QuantityReducer } from './Component/Reducer/quantityReducer';
-import EditAddress from './Component/view/User/EditAddress';
-import UserOrder from './Component/view/User/UserOrder'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-import BuyNow from './Component/view/User/BuyNow';
-// const LazyComponent = React.lazy(() => import('./LazyComponent'));
+const Login          =lazy(()=>import('./Component/view/Admin/resgistration/Login'))
+const Registration   =lazy(()=>import('./Component/view/Admin/resgistration/Registration'))
+const UserDashboard  =lazy(()=>import('./Component/view/Admin/product/Product'))
+const ProductDisplay =lazy(()=>import('./Component/view/Admin/product/ProductDisplay'))
+const ProductView    =lazy(()=>import('./Component/view/Admin/product/ProductView'))
+const ProductEdit    =lazy(()=>import('./Component/view/Admin/product/ProductEdit'))
+const Header         =lazy(()=>import('./Component/view/Admin/Header'))
+const ForgetPassword =lazy(()=>import('./Component/view/Admin/resgistration/ForgetPassword'))
+const ResetPassword  =lazy(()=>import('./Component/view/Admin/resgistration/ResetPassword'))
+const AddToCard      =lazy(()=>import('./Component/view/User/AddToCard'))
+const UserAddress    =lazy(()=>import('./Component/view/User/UserAddress'))
+const AddAddress     =lazy(()=>import('./Component/view/User/AddAddress'))
+const Payment        =lazy(()=>import('./Component/view/User/Payment'))
+const QuantityReducer = lazy(()=>import('./Component/Reducer/quantityReducer'))
+const EditAddress = lazy(()=>import('./Component/view/User/EditAddress')) 
+const UserOrder = import('./Component/view/User/UserOrder')
 
+const BuyNow = lazy(()=>import('./Component/view/User/BuyNow'))
+// const LazyComponent = React.lazy(() => import('./LazyComponent'));
+const Home = lazy(()=>import( './Component/view/Home'))
 
 function App() {
   const [loginState,loginDispatch]  = useReducer(loginReducer,{initialState:false})
