@@ -3,7 +3,7 @@ import './App.css'
 import './assets/home.scss'
 import 'react-toastify/dist/ReactToastify.css'; 
 import { BtnContext, CartLength, ErrorContext, PaymentContext, PaymentMethod, QuantityContext, UserContext } from './Component/Hooks/useContext'
-import React, { lazy,useEffect, useReducer,useState } from 'react'
+import React, { lazy,useEffect, useReducer,useState,Suspense } from 'react'
 import { BtnReducer,  cartReducer, errorReducer, loginReducer, paymentMethodReducer, paymentReducer, } from './Component/Reducer/reducer'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
