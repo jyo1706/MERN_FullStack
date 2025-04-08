@@ -5,7 +5,7 @@
 }
 .shimmerCard div 
 {
-    background-color:#585757;
+    background-color:#9e9c9c;
 }
 .shimmerCard div:nth-child(2)
 {
@@ -19,7 +19,7 @@
 .ShimmerHeading,.ShimmerPrice,.ShimmerReview
 {
     height: 20px !important;
-    background-color: #585757 !important;
+    background-color: #9e9c9c !important;
     width:80%;
     margin-top: 10px !important;
     margin-left: 0px !important;
