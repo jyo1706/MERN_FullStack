@@ -92,7 +92,7 @@ class AdminController
         try 
         {
 
-        //    console.log("hello")
+           console.log("hello")
             res.clearCookie('token')
             res.status(200).json({message:'logout'})
         } 
