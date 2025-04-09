@@ -96,7 +96,7 @@ class AdminController
 
 
            console.log("hello")
-            res.clearCookie('token')
+            res.clearCookie('tokens')
             res.status(200).json({message:'logout'})
 
           res.clearCookie('tokens'); // Clear cookie for each matched name
