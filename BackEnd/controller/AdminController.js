@@ -64,7 +64,7 @@ class AdminController
                     // console.log('login',token);
         
                     // Set token in cookie
-                    res.cookies("token", token, {
+                    res.cookie("token", token, {
                         // expires: new Date(Date.now() + 25892000000),  // Cookie expiration (30 days)
                         // httpOnly: true,  // Prevent access from JavaScript (XSS protection)
                         
