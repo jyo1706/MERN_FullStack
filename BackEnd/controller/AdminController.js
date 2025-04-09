@@ -64,7 +64,7 @@ class AdminController
                     // console.log('login',token);
         
                     // Set token in cookie
-                    res.cookie("token", token, {
+                    res.cookie("tokens", token, {
                         // expires: new Date(Date.now() + 25892000000),  // Cookie expiration (30 days)
                         // httpOnly: true,  // Prevent access from JavaScript (XSS protection)
                         
@@ -93,7 +93,7 @@ class AdminController
         {
 
            for (let cookieName in req.cookies) {
-            if (cookieName.includes('token')) {
+            if (cookieName.includes('tokens')) {
                 res.clearCookie(cookieName, { path: '/' }); // Clear cookie for each matched name
             }
         }
