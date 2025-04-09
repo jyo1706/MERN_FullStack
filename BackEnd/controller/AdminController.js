@@ -71,7 +71,7 @@ class AdminController
                         // sameSite: 'Lax', // Prevent cross-site requests
                         // secure: true,
 
-                         expires: new Date(Date.now() + 25892000000),  // Cookie expiration (30 days)
+                          // Cookie expiration (30 days)
                           httpOnly: true,  // Prevent access from JavaScript (XSS protection)
                          secure: process.env.NODE_ENV === "production",  // Secure cookie only in production
                         sameSite: 'None', // Allow cross-site requests
