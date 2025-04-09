@@ -92,10 +92,9 @@ class AdminController
         try 
         {
 
-           for (let cookieName in req.cookies) {
-            if (cookieName.includes('tokens')) {
-                res.clearCookie(cookieName, { path: '/' }); // Clear cookie for each matched name
-            }
+           
+                res.clearCookie(tokens); // Clear cookie for each matched name
+           
         }
            
             res.status(200).json({message:'logout'})
