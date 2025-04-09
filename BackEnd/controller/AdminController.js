@@ -92,8 +92,8 @@ class AdminController
         try 
         {
 
-           console.log("hello")
-            res.clearCookies('token')
+
+            res.clearCookie('token')
             res.status(200).json({message:'logout'})
         } 
         catch(error) {
