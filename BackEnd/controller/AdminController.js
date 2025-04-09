@@ -93,7 +93,7 @@ class AdminController
         {
 
 
-            res.clearCookie('token')
+            res.clearCookie('token', { path: '/' });
             res.status(200).json({message:'logout'})
         } 
         catch(error) {
