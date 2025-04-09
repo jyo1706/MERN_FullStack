@@ -5,13 +5,13 @@ const RegistrationModel = require('../model/registration')
 const auth = async(req,res,next)=>
 {   
     // console.log("hello")
-    const token = req.cookies.tokens
+    const token = req.cookies.token
     // console.log(token)
     try
     {
         if(token)                     
         {
-            const verifytoken =  jwt.verify(tokens,"##user##1706")
+            const verifytoken =  jwt.verify(token,"##user##1706")
             // console.log(verifytoken.ID)
             const data = await RegistrationModel.findOne({_id:verifytoken.ID})
               req.data =data
