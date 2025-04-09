@@ -49,7 +49,7 @@ class AdminController
     static login = async(req,res)=>
     {
             try {
-                res.clearCookie('token')
+                // res.clearCookie('tokens')
                 const { email, password } = req.body;
                 const [data] = await RegistrationModel.find({ email: email });
         
@@ -93,7 +93,7 @@ class AdminController
         {
 
            
-                res.clearCookie(tokens); // Clear cookie for each matched name
+                res.clearCookie('tokens'); // Clear cookie for each matched name
            
         }
            
