@@ -267,7 +267,7 @@ table {
 }
 .mainLoader
 {
-  height:inherit;
+  height:600px;
   display:flex;
   align-items:center;
   justify-content:center;
