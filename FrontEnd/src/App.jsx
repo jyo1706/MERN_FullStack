@@ -51,7 +51,7 @@ useEffect(()=>{
 
 return (
     <>
-     <Suspense fallback={<div className=''>Loading..........</div>}>
+     <Suspense fallback={<div className='loader'></div>}>
     <UserContext.Provider value = {{loginState,loginDispatch,search,setSearch}}>
     <BtnContext.Provider value = {{btnState,btnDispatch}}>
     <PaymentContext.Provider value = {{paymentState,paymentDispatch}}>

@@ -93,10 +93,6 @@ class AdminController
     {
         try 
         {
-
-
-          
-
           res.clearCookie('token'); // Clear cookie for each matched name
           res.status(200).json({message:'logout'})
 
