@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BtnContext, CartLength, ErrorContext, PaymentContext, PaymentMethod, QuantityContext, UserContext } from './Component/Hooks/useContext'
 import React, { lazy,useEffect, useReducer,useState,Suspense } from 'react'
 import { BtnReducer,  cartReducer, errorReducer, loginReducer, paymentMethodReducer, paymentReducer, } from './Component/Reducer/reducer'
+import { QuantityReducer} from './Component/Reducer/quantityReducer';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 const Login          =lazy(()=>import('./Component/view/Admin/resgistration/Login'))
@@ -20,7 +21,7 @@ const AddToCard      =lazy(()=>import('./Component/view/User/AddToCard'))
 const UserAddress    =lazy(()=>import('./Component/view/User/UserAddress'))
 const AddAddress     =lazy(()=>import('./Component/view/User/AddAddress'))
 const Payment        =lazy(()=>import('./Component/view/User/Payment'))
-const QuantityReducer = lazy(()=>import('./Component/Reducer/quantityReducer'))
+// const QuantityReducer = lazy(()=>import('./Component/Reducer/quantityReducer'))
 const EditAddress = lazy(()=>import('./Component/view/User/EditAddress')) 
 const UserOrder = lazy(()=>import('./Component/view/User/UserOrder'))
 
